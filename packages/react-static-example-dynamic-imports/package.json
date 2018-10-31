@@ -10,8 +10,13 @@
     "serve": "serve dist -p 3000"
   },
   "dependencies": {
+    "@reach/router": "^1.2.1",
     "axios": "^0.18.0",
-    "react-static": "^6.0.0-beta.29"
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-hot-loader": "^4.3.11",
+    "react-static": "^6.0.0-beta.29",
+    "react-universal-component": "^3.0.3"
   },
   "devDependencies": {
     "eslint-config-react-tools": "1.x.x",

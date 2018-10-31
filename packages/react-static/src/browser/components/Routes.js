@@ -6,7 +6,7 @@ import {
   templateUpdated,
   prefetch,
   getCurrentRoutePath,
-} from '../'
+} from ".."
 import { withStaticInfo } from './StaticInfo'
 import { getRoutePath, isSSR } from '../utils'
 import onLocation from '../utils/Location'
@@ -17,13 +17,16 @@ export default withStaticInfo(
     static defaultProps = {
       Loader: Spinner,
     }
+
     componentDidMount() {
       templateUpdated.cb = () => this.forceUpdate()
       this.offLocationChange = onLocation(() => this.forceUpdate())
     }
+
     componentWillUnmount() {
       if (this.offLocationChange) this.offLocationChange()
     }
+
     render() {
       const { children, Loader, staticInfo } = this.props
 
@@ -57,6 +60,7 @@ export default withStaticInfo(
             ])
             this.forceUpdate()
           })()
+
           return Loader
         }
 

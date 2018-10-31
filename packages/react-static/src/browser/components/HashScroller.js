@@ -9,6 +9,7 @@ export class RouterScroller extends React.Component {
     // Do not scroll to top on initial page load if hash does not exist
     this.scrollToHash({ orScrollToTop: false })
   }
+
   componentDidUpdate(prev) {
     if (
       prev.location.pathname !== this.props.location.pathname &&
@@ -21,6 +22,7 @@ export class RouterScroller extends React.Component {
       this.scrollToHash()
     }
   }
+
   scrollToTop = () => {
     const { autoScrollToTop, scrollToTopDuration } = this.props
     if (autoScrollToTop) {
@@ -29,6 +31,7 @@ export class RouterScroller extends React.Component {
       })
     }
   }
+
   scrollToHash = ({ orScrollToTop = true } = {}) => {
     const {
       scrollToHashDuration,
@@ -67,6 +70,7 @@ export class RouterScroller extends React.Component {
       })
     }
   }
+
   render() {
     return this.props.children
   }
