@@ -3,7 +3,7 @@
   "description": "A progressive static site generator for React",
   "version": "5.9.12",
   "license": "MIT",
-  "repository": "https://github.com/nozzle/react-static",
+  "repository": "https://github.com/javobal/react-static",
   "main": "lib/index.js",
   "types": "src/index.d.ts",
   "engines": {
@@ -17,8 +17,6 @@
     "start": "rimraf lib && rimraf node_modules/react-static && babel -w src --out-dir lib --ignore '**/__tests__/*'",
     "postpublish": "git push --tags",
     "prepublishOnly": "yarn build && yarn test",
-    "prepare": "yarn build && yarn test",
-    "install": "babel src --out-dir lib --ignore '**/__tests__/*'",
     "publishNext": "yarn publish --tag next",
     "prepGitignore": "node scripts/prepGitignore.js",
     "startDocs": "cd www && yarn start",
