@@ -18,7 +18,7 @@
     "postpublish": "git push --tags",
     "prepublishOnly": "yarn build && yarn test",
     "prepare": "yarn build && yarn test",
-    "install": "yarn build",
+    "install": "babel src --out-dir lib --ignore '**/__tests__/*'",
     "publishNext": "yarn publish --tag next",
     "prepGitignore": "node scripts/prepGitignore.js",
     "startDocs": "cd www && yarn start",
