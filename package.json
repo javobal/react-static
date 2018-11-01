@@ -17,6 +17,7 @@
     "start": "rimraf lib && rimraf node_modules/react-static && babel -w src --out-dir lib --ignore '**/__tests__/*'",
     "postpublish": "git push --tags",
     "prepublishOnly": "yarn build && yarn test",
+    "prepare": "yarn build && yarn test",
     "publishNext": "yarn publish --tag next",
     "prepGitignore": "node scripts/prepGitignore.js",
     "startDocs": "cd www && yarn start",
